@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Coding Problems - Google 工程師 Coding 面試範例 - Jyun | WangXiangLin Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Coding Problems - Google 工程師 Coding 面試範例">
+<meta property="og:url" content="https://jyun9504.github.io/2020/05/15/coding-problems-google-coding-interview-example/index.html">
+<meta property="og:site_name" content="Jyun | WangXiangLin Blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://images.pexels.com/photos/7075/people-office-group-team.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260">
+<meta property="article:published_time" content="2020-05-15T05:35:17.000Z">
+<meta property="article:modified_time" content="2020-05-15T08:23:07.260Z">
+<meta property="article:author" content="Jyun">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.pexels.com/photos/7075/people-office-group-team.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories">分類</a>
+            
+            <a class="navbar-item "
+               href="https://wang-xiang-lin-website.firebaseapp.com/">關於</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/jyun9504" target="_blank" rel="noopener">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Coding Problems - Google 工程師 Coding 面試範例
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2020-05-15T05:35:17.000Z" itemprop="datePublished">May 15 2020</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/CodingProblems/">CodingProblems</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            8 minutes read (About 1191 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <!-- ![](/jyun9504.github.io/gallery/people-office-group-team.jpg)--><html><head></head><body><p><a href="https://jyun9504.github.io/2020/05/15/coding-problems-google-coding-interview-example/"><img src="https://images.pexels.com/photos/7075/people-office-group-team.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt></a></p>
+<a id="more"></a>
+
+<h2 id="How-to-Work-at-Google-&#x2014;-Example-Coding-Engineering-Interview"><a href="#How-to-Work-at-Google-&#x2014;-Example-Coding-Engineering-Interview" class="headerlink" title="How to: Work at Google &#x2014; Example Coding/Engineering Interview"></a>How to: Work at Google &#x2014; Example Coding/Engineering Interview</h2><p>LINK&#xFF1A; <a href="https://www.youtube.com/watch?v=XKu_SEDAykw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=XKu_SEDAykw</a></p>
+<h2 id="&#x5F9E;&#x5F71;&#x7247;&#x4E2D;&#x5B78;&#x5230;&#x4EC0;&#x9EBC;"><a href="#&#x5F9E;&#x5F71;&#x7247;&#x4E2D;&#x5B78;&#x5230;&#x4EC0;&#x9EBC;" class="headerlink" title="&#x5F9E;&#x5F71;&#x7247;&#x4E2D;&#x5B78;&#x5230;&#x4EC0;&#x9EBC;"></a>&#x5F9E;&#x5F71;&#x7247;&#x4E2D;&#x5B78;&#x5230;&#x4EC0;&#x9EBC;</h2><p>&#x9019;&#x500B;&#x5F71;&#x7247;&#x4E3B;&#x8981;&#x4ECB;&#x7D39; Google &#x5728; coding interview &#x74B0;&#x7BC0;&#x7684;&#x6A21;&#x64EC;&#x60C5;&#x6CC1;&#xFF0C;&#x6700;&#x5927;&#x7684;&#x91CD;&#x9EDE;&#x5728;&#x65BC;&#x5982;&#x4F55;&#x89E3;&#x984C;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4EC0;&#x9EBC;&#x6A23;&#x7684;&#x6D41;&#x7A0B;&#x6E05;&#x695A;&#x5C55;&#x73FE;&#x81EA;&#x5DF1;&#x5982;&#x4F55;&#x89E3;&#x6C7A;&#x554F;&#x984C;&#xFF0C;&#x9664;&#x4E86;&#x984C;&#x76EE;&#x7D50;&#x679C;&#x5916;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#x89E3;&#x984C;&#x904E;&#x7A0B;&#x4E2D;&#x5982;&#x4F55;&#x601D;&#x8003;&#xFF0C;&#x6574;&#x500B;&#x6D41;&#x7A0B;&#x53EF;&#x4EE5;&#x7D30;&#x5206;&#x6210;&#xFF1A;</p>
+<ol>
+<li><p>&#x9762;&#x8A66;&#x5B98;&#x95E1;&#x8FF0;&#x554F;&#x984C;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#xFF08;i.e. sorted array&#xFF09;&#x5BEB;&#x4E0B; key points&#xFF0C;&#x78BA;&#x4FDD;&#x6240;&#x6709;&#x7D30;&#x7BC0;&#xFF0C;&#x5C55;&#x793A;&#x7D44;&#x7E54;&#x80FD;&#x529B;</p>
+</li>
+<li><p>&#x5728;&#x6B21;&#x78BA;&#x8A8D; inputs  outputs</p>
+</li>
+<li><p>&#x601D;&#x8003;&#x554F;&#x984C;&#x91CD;&#x9EDE;&#x662F;&#x4EC0;&#x9EBC;&#xFF0C;&#x6709;&#x6642;&#x9593;&#x7A7A;&#x9593;&#x5167;&#x5B58;&#x7684;&#x9650;&#x5236;&#x55CE;</p>
+</li>
+<li><p>&#x7528;&#x6700;&#x7C21;&#x55AE;/&#x66B4;&#x529B;&#x89E3;&#x6CD5;&#x958B;&#x59CB;&#x89E3;&#x984C;&#xFF0C;&#x53E3;&#x982D;&#x63CF;&#x8FF0;&#xFF0C;&#x8868;&#x660E;&#x51FA;&#x4F60;&#x5584;&#x65BC;&#x601D;&#x8003;&#x8207;&#x6279;&#x5224;</p>
+</li>
+<li><p>&#x8AAA;&#x660E;&#x9019;&#x500B;&#x89E3;&#x6CD5;&#x4E0D;&#x662F;&#x6700;&#x4F73;&#x89E3;&#xFF0C;&#x5B83;&#x7684; bigO&#xFF0C;readable</p>
+</li>
+<li><p>&#x8AAA;&#x660E; code &#x6709;&#x4EC0;&#x9EBC;&#x5730;&#x65B9;&#x662F;&#x591A;&#x9918;&#x7684;&#xFF0C;&#x91CD;&#x8907;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x600E;&#x9EBC;&#x53BB;&#x89E3;&#x6C7A;</p>
+</li>
+<li><p>&#x5728;&#x771F;&#x6B63;&#x958B;&#x59CB;&#x5BEB;&#x4E0B;&#x4EE3;&#x78BC;&#x524D;&#xFF0C;&#x5148;&#x5728;&#x554F;&#x984C;&#x4E0A;&#x5BEB;&#x4E0B;&#x6211;&#x8981;&#x600E;&#x9EBC;&#x505A;</p>
+</li>
+<li><p>&#x958B;&#x59CB;&#x5C07;&#x4EE3;&#x78BC;&#x6A21;&#x584A;&#x5316;&#xFF0C;&#x628A;&#x4EE3;&#x78BC;&#x5206;&#x6210;&#x5C0F;&#x7247;&#x6BB5;&#xFF0C;&#x9700;&#x8981;&#x6642;&#x5BEB;&#x4E0B;&#x8A3B;&#x89E3;</p>
+</li>
+<li><p>&#x771F;&#x6B63;&#x5BEB;&#x4E0B;&#x89E3;&#x6CD5;&#xFF0C;&#x524D;&#x9762;&#x6E96;&#x5099;&#x5F97;&#x8D8A;&#x591A;&#xFF0C;&#x80FD;&#x5BEB;&#x4E0B;&#x7684;&#x4EE3;&#x78BC;&#x5C31;&#x8D8A;&#x597D;&#xFF0C;&#x5343;&#x842C;&#x4E0D;&#x8981;&#x4E0D;&#x78BA;&#x5B9A;&#x600E;&#x9EBC;&#x5BEB;&#x5C31;&#x958B;&#x59CB;</p>
+</li>
+<li><p>&#x601D;&#x8003;&#x7A0B;&#x5F0F;&#x4EC0;&#x9EBC;&#x60C5;&#x6CC1;&#x4E0B;&#x6703;&#x51FA;&#x932F;&#xFF0C;&#x5047;&#x8A2D;&#x6709;&#x4EBA;&#x60F3;&#x8981;&#x7834;&#x58DE;&#x4F60;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#xFF0C;&#x4EC0;&#x9EBC;&#x6A23;&#x7684; inputs &#x6703;&#x5C0E;&#x81F4;&#x7A0B;&#x5F0F;&#x51FA;&#x932F;&#xFF0C;&#x544A;&#x8A34;&#x9762;&#x8A66;&#x5B98;&#x6211;&#x6703;&#x600E;&#x9EBC;&#x6E2C;&#x8A66;&#x9019;&#x6BB5;&#x7A0B;&#x5F0F;&#x78BC;</p>
+</li>
+<li><p>&#x547D;&#x540D;&#x76E1;&#x91CF;&#x7528;&#x4EBA;&#x770B;&#x5F97;&#x61C2;&#x7684;</p>
+</li>
+<li><p>&#x544A;&#x8A34;&#x9762;&#x8A66;&#x5B98;&#x4F60;&#x6703;&#x600E;&#x9EBC;&#x52A0;&#x5F37;&#x4F60;&#x7684;&#x4EE3;&#x78BC;&#xFF0C;&#x6709;&#x6C92;&#x6709;&#x8FA6;&#x6CD5;&#x66F4; readable&#xFF0C;&#x6703;&#x600E;&#x9EBC;&#x4F7F;&#x7528; google &#x4F86;&#x5E6B;&#x52A9;&#x4F60;</p>
+</li>
+</ol>
+<h2 id="&#x5728;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x984C;&#x76EE;&#x6211;&#x7528;-JavaScript-&#x5BE6;&#x4F5C;&#x4E00;&#x6B21;"><a href="#&#x5728;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x984C;&#x76EE;&#x6211;&#x7528;-JavaScript-&#x5BE6;&#x4F5C;&#x4E00;&#x6B21;" class="headerlink" title="&#x5728;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x984C;&#x76EE;&#x6211;&#x7528; JavaScript &#x5BE6;&#x4F5C;&#x4E00;&#x6B21;"></a>&#x5728;&#x9019;&#x500B;&#x7BC4;&#x4F8B;&#x984C;&#x76EE;&#x6211;&#x7528; JavaScript &#x5BE6;&#x4F5C;&#x4E00;&#x6B21;</h2><p>Question&#xFF1A;<br>&#x8F38;&#x5165;&#x6578;&#x5217;&#xFF0C;&#x88E1;&#x9762;&#x7684;&#x6578;&#x5B57;&#x5169;&#x5169;&#x76F8;&#x52A0;&#xFF0C;&#x7B49;&#x65BC;8&#x7684;&#x8A71;&#x56DE;&#x50B3; true<br>[1,2,3,9] if sum = 8 return false<br>[1,2,4,4] if sum = 8 return true</p>
+<ol>
+<li>&#x91D0;&#x6E05;&#x554F;&#x984C;&#x5F8C;&#x9996;&#x5148;&#x4EE5;&#x66B4;&#x529B;&#x89E3;&#x6CD5; run &#x4E00;&#x904D;&#xFF0C;&#x5B8C;&#x5168;&#x904D;&#x6B77;&#x6574;&#x500B;&#x9663;&#x5217;</li>
+</ol>
+<p></p><figure class="highlight js hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> arr2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkSumEqual</span>(<span class="hljs-params">arr</span>) </span>{</span><br><span class="line">  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.length - <span class="hljs-number">1</span>; i++){</span><br><span class="line">    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; arr.length - <span class="hljs-number">1</span>; j++){</span><br><span class="line">      <span class="hljs-keyword">if</span>(arr[i] + arr[j] == <span class="hljs-number">8</span>)</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span></span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span></span><br><span class="line">};</span><br><span class="line"><span class="hljs-built_in">console</span>.log(checkSumEqual(arr2));</span><br></pre></td></tr></tbody></table></figure><p></p>
+<ol start="2">
+<li>&#x53EF;&#x4EE5;&#x767C;&#x73FE;&#x9019;&#x7A2E;&#x89E3;&#x6CD5;&#x7684;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x662F; &#xFF2F;(n^2)&#xFF0C;&#x800C;&#x4E14;&#x6703;&#x6709;&#x91CD;&#x8907;&#x76F8;&#x52A0;&#x7684;&#x60C5;&#x5F62;&#xFF0C;&#x958B;&#x59CB;&#x601D;&#x8003;&#x6709;&#x4EC0;&#x9EBC;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x4E0D;&#x6703;&#x91CD;&#x8907;&#x76F8;&#x52A0;&#xFF0C;&#x53EF;&#x80FD;&#x6703;&#x60F3;&#x5230;&#x4F7F;&#x7528;&#x985E;&#x4F3C; Selection Sort &#x628A;&#x7B2C;&#x4E8C;&#x5C64;&#x8FF4;&#x5708; j &#x521D;&#x59CB;&#x503C;&#x5F9E; 0 &#x6539;&#x70BA; i&#xFF0C;&#x89E3;&#x6C7A;&#x4E86;&#x91CD;&#x8907;&#x76F8;&#x52A0;&#x7684;&#x554F;&#x984C;&#xFF0C;&#x76F8;&#x6BD4;&#x539F;&#x672C;&#x4F86;&#x8AAA;&#x597D;&#x4E86;&#x4E00;&#x9EDE;&#xFF0C;&#x4F46;&#x662F;&#x9084;&#x662F;&#x4E00;&#x6A23;&#x4F7F;&#x7528;&#x4E86;&#x5169;&#x5C64;&#x7684;&#x8FF4;&#x5708;&#xFF0C;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x4E00;&#x6A23;&#x662F; &#xFF2F;(n^2)&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x601D;&#x8003;&#x770B;&#x770B;&#x6709;&#x6C92;&#x6709;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x3002;&#x5728;&#x5F71;&#x7247;&#x88E1;&#x88AB;&#x9762;&#x8A66;&#x8005;&#x60F3;&#x5230;&#x7684;&#x662F;&#x7E2E;&#x5C0F;&#x7BC4;&#x570D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6700;&#x5927;&#x503C;&#x52A0;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x5927;&#x65BC; 8&#xFF0C;&#x6700;&#x5927;&#x503C; index - 1&#xFF0C;&#x53CD;&#x4E4B;&#x5982;&#x679C;&#x5C0F;&#x65BC; 8 &#x5C31;&#x8B93;&#x6700;&#x5C0F;&#x503C; index + 1&#xFF0C;&#x5982;&#x679C;&#x4E2D;&#x9593;&#x9047;&#x5230;&#x76F8;&#x52A0;&#x7B49;&#x65BC; 8 &#x5C31;&#x76F4;&#x63A5;&#x56DE;&#x50B3; true&#xFF0C;&#x8FF4;&#x5708;&#x5230;&#x6700;&#x5C0F;&#x503C; &gt; &#x6700;&#x5927;&#x503C;&#x70BA;&#x6B62;</li>
+</ol>
+<p></p><figure class="highlight js hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> arr2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkSumEqual</span>(<span class="hljs-params">arr</span>) </span>{</span><br><span class="line">  <span class="hljs-keyword">let</span> min = <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-keyword">let</span> max = arr.length - <span class="hljs-number">1</span>; </span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">while</span>(min &lt; max){</span><br><span class="line">    <span class="hljs-keyword">let</span> s = arr[min] + arr[max];</span><br><span class="line">    <span class="hljs-keyword">if</span>(s == <span class="hljs-number">8</span>){</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span></span><br><span class="line">    }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s &gt; <span class="hljs-number">8</span>){</span><br><span class="line">        max--;</span><br><span class="line">    }<span class="hljs-keyword">else</span>{</span><br><span class="line">        min++;</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span></span><br><span class="line">};</span><br><span class="line"><span class="hljs-built_in">console</span>.log(checkSumEqual(arr2));</span><br></pre></td></tr></tbody></table></figure><p></p>
+<ol start="3">
+<li>&#x770B;&#x4F3C;&#x5B8C;&#x7F8E;&#x7684;&#x89E3;&#x6C7A;&#x554F;&#x984C;&#xFF0C;&#x53EA;&#x6709;&#x4F7F;&#x7528;&#x5230;&#x4E00;&#x500B;&#x8FF4;&#x5708;&#xFF0C;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6; &#xFF2F;(n)&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x9019;&#x88E1;&#x9762;&#x8A66;&#x5B98;&#x4E1F;&#x51FA;&#x4E00;&#x500B;&#x96E3;&#x984C;&#xFF0C;&#x4E0D;&#x4FDD;&#x8B49;&#x8F38;&#x5165;&#x7684;&#x503C;&#x6709;&#x7D93;&#x904E;&#x6392;&#x5E8F;&#xFF0C;&#x6240;&#x4EE5;&#x9019;&#x500B;&#x89E3;&#x6CD5;&#x884C;&#x4E0D;&#x901A;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x9084;&#x8981;&#x505A;&#x6392;&#x5E8F;&#x90A3;&#x53EF;&#x80FD;&#x6548;&#x80FD;&#x9084;&#x6C92;&#x6709;&#x66B4;&#x529B;&#x89E3;&#x597D;&#xFF0C;&#x6240;&#x4EE5;&#x9084;&#x8981;&#x518D;&#x770B;&#x770B;&#x6709;&#x4EC0;&#x9EBC;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x80FD;&#x6703;&#x60F3;&#x5230; hash table &#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x505A;&#x4E00;&#x6B21;&#x904D;&#x6B77;&#xFF0C;&#x628A; 8 &#x6E1B;&#x6389;&#x73FE;&#x5728;&#x904D;&#x6B77;&#x5230;&#x7684;&#x6578;&#x5B57;&#x653E;&#x5230; hash &#x8868;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x73FE;&#x5728;&#x904D;&#x6B77;&#x5230;&#x7684;&#x6578;&#x5B57;&#x5339;&#x914D;&#x5230; hash &#x7684;&#x6578;&#x5B57;&#xFF0C;&#x5C31;&#x4EE3;&#x8868;&#x6709;&#x4E00;&#x5C0D;&#x6578;&#x5B57;&#x76F8;&#x52A0;&#x70BA; 8&#xFF0C;&#x56DE;&#x50B3; true</li>
+</ol>
+<p></p><figure class="highlight js hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>];</span><br><span class="line"><span class="hljs-keyword">const</span> arr2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkSumEqual</span>(<span class="hljs-params">arr</span>) </span>{</span><br><span class="line">  <span class="hljs-keyword">let</span> hashTable = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>();</span><br><span class="line">  <span class="hljs-keyword">for</span>(i = <span class="hljs-number">0</span>; i &lt; arr.length; i++){</span><br><span class="line">    <span class="hljs-keyword">if</span>(hashTable.has(arr[i]))</span><br><span class="line">      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span></span><br><span class="line">    hashTable.add(<span class="hljs-number">8</span> - arr[i])</span><br><span class="line">  }</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span></span><br><span class="line">}</span><br><span class="line"><span class="hljs-built_in">console</span>.log(checkSumEqual(arr2));</span><br></pre></td></tr></tbody></table></figure><p></p>
+<ol start="4">
+<li><p>&#x9019;&#x6A23;&#x89E3;&#x6C7A;&#x4E86;&#x904D;&#x6B77;&#x4E00;&#x6B21;&#xFF0C;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;O(n)&#xFF0C;&#x800C;&#x4E14;&#x4E0D;&#x6703;&#x6709;&#x6392;&#x5E8F;&#x554F;&#x984C;&#xFF0C;&#x56E0;&#x70BA; HashTable &#x662F;&#x6162;&#x6162;&#x628A;&#x524D;&#x9762;&#x904D;&#x6B77;&#x7684;&#x503C;&#x8655;&#x7406;&#x5F8C;&#x52A0;&#x9032;&#x53BB;&#xFF0C;&#x4E5F;&#x4E0D;&#x6703;&#x6709;&#x81EA;&#x5DF1;&#x52A0;&#x81EA;&#x5DF1;&#x7684;&#x72C0;&#x6CC1;&#x7522;&#x751F;&#xFF0C;&#x5F88;&#x597D;&#x7684;&#x89E3;&#x6CD5;&#x3002;</p>
+</li>
+<li><p>&#x6700;&#x5F8C;&#x5230;&#x9019;&#x88E1;&#x5C31;&#x544A;&#x4E00;&#x6BB5;&#x843D;&#x4E86;&#xFF0C;&#x53EF;&#x80FD;&#x9084;&#x6703;&#x518D;&#x554F;&#x4E00;&#x4E9B;&#x76F8;&#x95DC;&#x554F;&#x984C;&#xFF0C;&#x6BD4;&#x5982;&#x8F38;&#x5165;&#x7684;&#x6578;&#x5B57;&#x592A;&#x591A;&#xFF0C;&#x7121;&#x6CD5;&#x8CA0;&#x8377;&#xFF0C;&#x4F60;&#x6703;&#x7528;&#x4EC0;&#x9EBC;&#x65B9;&#x6CD5;&#x89E3;&#x6C7A;&#xFF0C;&#x9019;&#x908A;&#x5C31;&#x662F;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x60F3;&#x6CD5;&#x8B1B;&#x51FA;&#x4F86;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x628A;&#x8F38;&#x5165;&#x5206;&#x6BB5;&#x8655;&#x7406;&#xFF0C;&#x5206;&#x6BB5;&#x8655;&#x7406;&#x53C8;&#x6703;&#x9047;&#x5230;&#x4EC0;&#x9EBC;&#x554F;&#x984C;&#x2026;&#x2026;</p>
+</li>
+</ol>
+</body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/JavaScript/">#JavaScript</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2020/05/12/data-structure-javascript-linked-list/">資料結構 x JavaScript -（2）鏈結串列 Linked List</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="addthis_inline_share_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e9cfd9a3dbb4e6d"></script>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://jyun9504.github.io/2020/05/15/coding-problems-google-coding-interview-example/';
+        this.page.identifier = '2020/05/15/coding-problems-google-coding-interview-example/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'house-of-jyun' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2020 Jyun&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/jyun9504" target="_blank" rel="noopener">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>
