@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Tag: JavaScript - Jyun | WangXiangLin Blog</title>
+<title>JavaScript Value vs. Reference - Jyun | WangXiangLin Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -16,13 +16,18 @@
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Jyun | WangXiangLin Blog">
-<meta property="og:url" content="https://jyun9504.github.io/tags/JavaScript/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Value vs. Reference">
+<meta property="og:url" content="https://jyun9504.github.io/2020/05/18/javascript-value-vs-refrerence/index.html">
 <meta property="og:site_name" content="Jyun | WangXiangLin Blog">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://images.pexels.com/photos/37323/goats-competition-dispute.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260">
+<meta property="article:published_time" content="2020-05-18T04:47:01.000Z">
+<meta property="article:modified_time" content="2020-05-18T05:47:26.976Z">
 <meta property="article:author" content="Jyun">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images.pexels.com/photos/37323/goats-competition-dispute.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260">
 
 
 
@@ -112,20 +117,12 @@
     </div>
 </nav>
 
-    <section class="section section-heading">
+    <section class="section">
     <div class="container">
-        <div class="content">
-            <h5>#JavaScript</h5>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
+    <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2020/05/18/javascript-value-vs-refrerence/" itemprop="url">JavaScript Value vs. Reference</a>
+            JavaScript Value vs. Reference
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -148,141 +145,73 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <!-- ![](/jyun9504.github.io/gallery/goats-competition-dispute.jpg)--><html><head></head><body><p><a href="https://jyun9504.github.io/2020/05/18/javascript-value-vs-refrerence/"><img src="https://images.pexels.com/photos/37323/goats-competition-dispute.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt></a></p></body></html>
-        <p class="article-more-link">
-            <a href="/2020/05/18/javascript-value-vs-refrerence/#more">Read More</a>
-        </p>
+        <!-- ![](/jyun9504.github.io/gallery/goats-competition-dispute.jpg)--><html><head></head><body><p><a href="https://jyun9504.github.io/2020/05/18/javascript-value-vs-refrerence/"><img src="https://images.pexels.com/photos/37323/goats-competition-dispute.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt></a></p>
+<a id="more"></a>
+
+<h2 id="&#x5728;-JavaScript-&#x74B0;&#x5883;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8F38;&#x5165;&#xFF1A;"><a href="#&#x5728;-JavaScript-&#x74B0;&#x5883;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8F38;&#x5165;&#xFF1A;" class="headerlink" title="&#x5728; JavaScript &#x74B0;&#x5883;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8F38;&#x5165;&#xFF1A;"></a>&#x5728; JavaScript &#x74B0;&#x5883;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x8F38;&#x5165;&#xFF1A;</h2><p></p><figure class="highlight js hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">console</span>.log( [] == [] );</span><br><span class="line"><span class="hljs-built_in">console</span>.log( {} == {} );</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="&#x5169;&#x500B;-log-&#x5F97;&#x5230;&#x7684;&#x6703;&#x662F;-true-&#x9084;&#x662F;-false"><a href="#&#x5169;&#x500B;-log-&#x5F97;&#x5230;&#x7684;&#x6703;&#x662F;-true-&#x9084;&#x662F;-false" class="headerlink" title="&#x5169;&#x500B; log &#x5F97;&#x5230;&#x7684;&#x6703;&#x662F; true &#x9084;&#x662F; false ?"></a>&#x5169;&#x500B; log &#x5F97;&#x5230;&#x7684;&#x6703;&#x662F; true &#x9084;&#x662F; false ?</h2><p>&#x7B54;&#x6848;&#x90FD;&#x662F;&#xFF1A; false</p>
+<h2 id="&#x518D;&#x4F86;&#x770B;&#x770B;&#x5176;&#x4ED6;&#x4F8B;&#x5B50;"><a href="#&#x518D;&#x4F86;&#x770B;&#x770B;&#x5176;&#x4ED6;&#x4F8B;&#x5B50;" class="headerlink" title="&#x518D;&#x4F86;&#x770B;&#x770B;&#x5176;&#x4ED6;&#x4F8B;&#x5B50;"></a>&#x518D;&#x4F86;&#x770B;&#x770B;&#x5176;&#x4ED6;&#x4F8B;&#x5B50;</h2><p></p><figure class="highlight js hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> object1 = {<span class="hljs-attr">value</span>: <span class="hljs-number">10</span>};</span><br><span class="line"><span class="hljs-keyword">var</span> object2 = object1;</span><br><span class="line"><span class="hljs-keyword">var</span> object3 = {<span class="hljs-attr">value</span>: <span class="hljs-number">10</span>};</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(object1 == object2); <span class="hljs-comment">// true</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(object1 == object3); <span class="hljs-comment">// false</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="&#x70BA;&#x4EC0;&#x9EBC;-object1-&#x8DDF;-object3-&#x88E1;&#x9762;&#x7684;&#x503C;&#x4E00;&#x6A23;&#xFF0C;&#x537B;&#x4E0D;&#x76F8;&#x7B49;&#xFF1F;"><a href="#&#x70BA;&#x4EC0;&#x9EBC;-object1-&#x8DDF;-object3-&#x88E1;&#x9762;&#x7684;&#x503C;&#x4E00;&#x6A23;&#xFF0C;&#x537B;&#x4E0D;&#x76F8;&#x7B49;&#xFF1F;" class="headerlink" title="&#x70BA;&#x4EC0;&#x9EBC; object1 &#x8DDF; object3 &#x88E1;&#x9762;&#x7684;&#x503C;&#x4E00;&#x6A23;&#xFF0C;&#x537B;&#x4E0D;&#x76F8;&#x7B49;&#xFF1F;"></a>&#x70BA;&#x4EC0;&#x9EBC; object1 &#x8DDF; object3 &#x88E1;&#x9762;&#x7684;&#x503C;&#x4E00;&#x6A23;&#xFF0C;&#x537B;&#x4E0D;&#x76F8;&#x7B49;&#xFF1F;</h2><p>JavaScript &#x7684; &#x7269;&#x4EF6; &#x8207; &#x4E00;&#x822C;&#x8B8A;&#x6578; &#x5728;&#x5B58;&#x53D6;&#x6642;&#xFF0C;&#x662F;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6A5F;&#x5236;&#x7684;&#xFF0C;&#x4E00;&#x822C;&#x8B8A;&#x6578;&#x4E0D;&#x8AD6;&#x662F; &#x5B57;&#x4E32;&#x3001;Number&#x3001;Boolean&#x3001;Null&#x2026;&#xFF0C;&#x8B8A;&#x6578;&#x5728;&#x8CE6;&#x503C;&#x6642;&#xFF0C;&#x6307;&#x5411;&#x7684;&#x662F;&#x5B83;&#x7684; <code>Value</code>&#xFF0C;Value &#x76F8;&#x7B49;&#x6BD4;&#x8F03;&#x51FA;&#x4F86;&#x7D50;&#x679C;&#x4E5F;&#x6703;&#x76F8;&#x7B49;&#xFF0C;&#x800C; Object &#x5C31;&#x4E0D;&#x540C;&#x4E86;&#xFF0C;&#x5728;&#x5BA3;&#x544A;&#x4E00;&#x500B;&#x8B8A;&#x6578;&#x662F; Object &#x6216; Array &#x6642;&#xFF0C;&#x7B49;&#x65BC;&#x662F;&#x5275;&#x5EFA;&#x4E86;&#x4E00;&#x500B;&#x7368;&#x4E00;&#x7121;&#x4E8C;&#x7684;&#x7A7A;&#x9593;&#xFF0C;&#x62FF;&#x5169;&#x500B;&#x4E0D;&#x540C;&#x7684;&#x7A7A;&#x9593;&#x6BD4;&#x8F03;&#xFF0C;&#x7D50;&#x679C;&#x7576;&#x7136;&#x4E5F;&#x5C31;&#x662F; <code>false</code></p>
+<h2 id="&#x7D50;&#x8AD6;"><a href="#&#x7D50;&#x8AD6;" class="headerlink" title="&#x7D50;&#x8AD6;"></a>&#x7D50;&#x8AD6;</h2><p>&#x6240;&#x4EE5;&#x5728; JavaScript &#x4E2D;&#xFF0C;&#x6BD4;&#x8F03;&#x5169;&#x8005;&#x662F;&#x5426;&#x76F8;&#x540C;&#x524D;&#xFF0C;&#x4E5F;&#x8981;&#x6CE8;&#x610F;&#x6BD4;&#x8F03;&#x7684;&#x5169;&#x65B9;&#x662F; by Value &#x9084;&#x662F; by Reference</p>
+</body></html>
     
     </div>
     
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/JavaScript/">#JavaScript</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2020/05/15/coding-problems-google-coding-interview-example/">Coding Problems - Google 工程師 Coding 面試範例</a>
+            
+        </span>
+    </div>
     
 </article>
 
 
+<div class="sharebox">
+    
+<div class="addthis_inline_share_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e9cfd9a3dbb4e6d"></script>
 
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/2020/05/15/coding-problems-google-coding-interview-example/" itemprop="url">Coding Problems - Google 工程師 Coding 面試範例</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2020-05-15T05:35:17.000Z" itemprop="datePublished">May 15 2020</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/CodingProblems/">CodingProblems</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            8 minutes read (About 1191 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <!-- ![](/jyun9504.github.io/gallery/people-office-group-team.jpg)--><html><head></head><body><p><a href="https://jyun9504.github.io/2020/05/15/coding-problems-google-coding-interview-example/"><img src="https://images.pexels.com/photos/7075/people-office-group-team.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt></a></p></body></html>
-        <p class="article-more-link">
-            <a href="/2020/05/15/coding-problems-google-coding-interview-example/#more">Read More</a>
-        </p>
-    
-    </div>
-    
-    
-</article>
+</div>
 
 
 
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://jyun9504.github.io/2020/05/18/javascript-value-vs-refrerence/';
+        this.page.identifier = '2020/05/18/javascript-value-vs-refrerence/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'house-of-jyun' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
 
+<div id="disqus_thread">
     
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/2020/05/12/data-structure-javascript-linked-list/" itemprop="url">資料結構 x JavaScript -（2）鏈結串列 Linked List</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2020-05-12T00:41:52.000Z" itemprop="datePublished">May 12 2020</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/DataStructure/">DataStructure</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            9 minutes read (About 1349 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <!-- ![](/jyun9504.github.io/gallery/pexels-photo-1144176.jpeg) --><html><head></head><body><p><a href="https://jyun9504.github.io/2020/05/11/data-structure-javascript-linked-list/"><img src="https://images.pexels.com/photos/1144176/pexels-photo-1144176.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt></a></p></body></html>
-        <p class="article-more-link">
-            <a href="/2020/05/12/data-structure-javascript-linked-list/#more">Read More</a>
-        </p>
-    
-    </div>
-    
-    
-</article>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+</div>
+</div>
 
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/2020/05/11/data-structure-javascript-array/" itemprop="url">資料結構 x JavaScript -（1）陣列 Array</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2020-05-11T02:56:37.000Z" itemprop="datePublished">May 11 2020</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/DataStructure/">DataStructure</a>
-        </span>
-        
-        
-        <span class="column is-narrow">
-            
-            
-            10 minutes read (About 1462 words)
-        </span>
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <!-- ![](/jyun9504.github.io/gallery/restaurant-drink-colorful-colourful.jpg) --><html><head></head><body><p><a href="https://jyun9504.github.io/2020/05/11/data-structure-javascript-array/"><img src="https://images.pexels.com/photos/4239/restaurant-drink-colorful-colourful.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt></a></p></body></html>
-        <p class="article-more-link">
-            <a href="/2020/05/11/data-structure-javascript-array/#more">Read More</a>
-        </p>
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-    
     </div>
 </section>
     <footer class="footer">
