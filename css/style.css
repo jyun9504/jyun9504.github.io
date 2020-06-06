@@ -60,6 +60,13 @@ a.tag.article-tag {
       content: '#';
       position: absolute;
       right: 100%; }
+  .article .article-entry p {
+    line-height: 2rem;
+    letter-spacing: .1rem; }
+  .article .article-entry .divider {
+    width: 5rem;
+    border-top: solid .1rem #c9c9c9;
+    margin: 5rem 0; }
   .article .article-entry a {
     word-break: break-word; }
 
