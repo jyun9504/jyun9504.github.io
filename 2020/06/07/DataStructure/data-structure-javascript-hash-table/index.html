@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Data Structure - Hash Table - Jyun | WangXiangLin Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Data Structure - Hash Table">
+<meta property="og:url" content="https://jyun9504.github.io/2020/06/07/DataStructure/data-structure-javascript-hash-table/index.html">
+<meta property="og:site_name" content="Jyun | WangXiangLin Blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jyun9504.github.io/gallery/hash-table.jpeg">
+<meta property="article:published_time" content="2020-06-07T01:07:55.000Z">
+<meta property="article:modified_time" content="2020-06-08T02:06:39.518Z">
+<meta property="article:author" content="Jyun">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="DataStructure">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jyun9504.github.io/gallery/hash-table.jpeg">
+
+
+
+
+
+<link rel="icon" href="/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories">分類</a>
+            
+            <a class="navbar-item "
+               href="https://wang-xiang-lin-website.firebaseapp.com/">關於</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/jyun9504" target="_blank" rel="noopener">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Data Structure - Hash Table
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2020-06-07T01:07:55.000Z" itemprop="datePublished">Jun 7 2020</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/DataStructure/">DataStructure</a>
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            3 minutes read (About 511 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <!-- ![](/jyun9504.github.io/gallery/pexels-photo-1148820.jpeg)--><html><head></head><body><p><a href="https://jyun9504.github.io/2020/06/06/DataStructure/data-structure-javascript-hash-table/"><img src="https://jyun9504.github.io/gallery/hash-table.jpeg" alt></a></p>
+<a id="more"></a>
+
+<h1 id="Hash-Table-&#x96DC;&#x6E4A;&#x8868;"><a href="#Hash-Table-&#x96DC;&#x6E4A;&#x8868;" class="headerlink" title="Hash Table &#x96DC;&#x6E4A;&#x8868;"></a>Hash Table &#x96DC;&#x6E4A;&#x8868;</h1><p>Hash Table&#xFF0C;&#x4E5F;&#x53EF;&#x7A31;&#x4F5C; Hash Map&#xFF0C;&#x662F; Dictionary &#x985E;&#x5225;&#x4E2D;&#x96DC;&#x6E4A;&#x8868;&#x7684;&#x4E00;&#x7A2E;&#x5BE6;&#x4F5C;&#x3002;&#x5BE6;&#x4F5C;&#x7684;&#x601D;&#x8DEF;&#x662F;&#xFF1A;&#x7576;&#x8981;&#x628A;&#x8CC7;&#x6599;&#x653E;&#x5230;&#x96DC;&#x6E4A;&#x8868;&#x6642;&#xFF0C;&#x5148;&#x7D66;&#x5B9A;&#x4E00;&#x500B; key &#x548C;&#x5B58;&#x653E;&#x7684; value&#xFF0C;&#x4E26;&#x5C07; key &#x7684;&#x6BCF;&#x500B;&#x5B57;&#x5143;&#x8F49;&#x63DB;&#x6210; ASCII Code &#x6216; Unicode Code &#x4E26;&#x76F8;&#x52A0;&#xFF0C;&#x9019;&#x500B;&#x76F8;&#x52A0;&#x7684;&#x503C;&#x5373;&#x662F; hash &#x9375;&#x503C;&#xFF0C;&#x5728; table &#x9663;&#x5217;&#x4E0A;&#x5C0D;&#x61C9;&#x5230;&#x5B58;&#x653E;&#x7684; value&#x3002;</p>
+<h2 id="&#x512A;&#x9EDE;&#xFF1A;"><a href="#&#x512A;&#x9EDE;&#xFF1A;" class="headerlink" title="&#x512A;&#x9EDE;&#xFF1A;"></a>&#x512A;&#x9EDE;&#xFF1A;</h2><p><code>insert</code>&#x3001;<code>lookup</code>&#x3001;<code>delete</code>&#xFF1A; &#x4F7F;&#x7528; key &#x9375;&#x503C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x900F;&#x904E; hash function &#x627E;&#x5230; value &#x6240;&#x5728;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x8003;&#x616E; collisions&#xFF0C;&#x4EE5;&#x4E0A;&#x7684;&#x64CD;&#x4F5C;&#x6642;&#x9593;&#x8907;&#x96DC;&#x5EA6;&#x70BA; <code>O(n)</code></p>
+<h2 id="&#x7F3A;&#x9EDE;&#xFF1A;"><a href="#&#x7F3A;&#x9EDE;&#xFF1A;" class="headerlink" title="&#x7F3A;&#x9EDE;&#xFF1A;"></a>&#x7F3A;&#x9EDE;&#xFF1A;</h2><ul>
+<li><p>&#x5132;&#x5B58;&#x4E0D;&#x6309;&#x7167;&#x9806;&#x5E8F;&#xFF0C;&#x6709;&#x4E9B;&#x6309;&#x7167;&#x9806;&#x5E8F;&#x7684;&#x64CD;&#x4F5C;&#x88AB;&#x9650;&#x5236;&#xFF0C;&#x4F8B;&#x5982;&#x60F3;&#x8981;&#x8655;&#x7406;&#x6709;&#x6642;&#x9593;&#x9806;&#x5E8F;&#x7684; data&#xFF0C;&#x6216;&#x662F;&#x5E0C;&#x671B;&#x5132;&#x5B58;&#x7684; data &#x53EF;&#x4EE5;&#x88AB;&#x6392;&#x5E8F;&#x3002;</p>
+<ul>
+<li>Python &#x4E2D;&#x4F8B;&#x5916;&#xFF0C;Python &#x9ED8;&#x8A8D;&#x5C07;&#x5B57;&#x5178;&#x6392;&#x5E8F;&#x4E86;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x8A72;&#x8A9E;&#x8A00;&#x4E2D;&#xFF0C;Array&#xFF08;Python&#x4E2D;&#x7684;List&#xFF09;&#x548C;Hash Table&#xFF08;Python&#x4E2D;&#x7684;Dict&#xFF09;&#x4E4B;&#x9593;&#x7684;&#x5340;&#x5225;&#x8F03;&#x5C0F;&#xFF1A;<a href="https://softwaremaniacs.org/blog/2020/02/05/dicts-ordered/en/" target="_blank" rel="noopener">https://softwaremaniacs.org/blog/2020/02/05/dicts-ordered/en/</a></li>
+</ul>
+</li>
+<li><p>&#x56E0;&#x70BA;&#x6709; collisions &#x554F;&#x984C;&#xFF0C;&#x5FC5;&#x9808;&#x5206;&#x914D;&#x5927;&#x91CF;&#x5167;&#x5B58;&#x624D;&#x80FD;&#x6709;&#x6548;&#x5DE5;&#x4F5C;&#x3002;</p>
+</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;&#x6642;&#x6A5F;"><a href="#&#x4F7F;&#x7528;&#x6642;&#x6A5F;" class="headerlink" title="&#x4F7F;&#x7528;&#x6642;&#x6A5F; :"></a>&#x4F7F;&#x7528;&#x6642;&#x6A5F; :</h2><ul>
+<li>&#x5728;&#x641C;&#x5C0B;&#x5F15;&#x64CE;&#x53EF;&#x4EE5;&#x7528;&#x4F86;&#x7E2E;&#x5C0F;&#x641C;&#x5C0B;&#x7BC4;&#x570D;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x641C;&#x5C0B;&#x7684;&#x6642;&#x5019;&#x8F38;&#x5165;&#x95DC;&#x9375;&#x5B57;&#xFF0C;&#x6211;&#x5011;&#x53EF;&#x4EE5;&#x628A;&#x9019;&#x500B;&#x95DC;&#x9375;&#x5B57;&#x50B3;&#x9032; hash function&#xFF0C;&#x7136;&#x5F8C; hash function &#x5C31;&#x53EF;&#x4EE5;&#x6307;&#x51FA;&#x9019;&#x500B;&#x95DC;&#x9375;&#x5B57;&#x5C0D;&#x61C9;&#x5230;&#x7684;&#x6876;&#x5B50;&#xFF0C;&#x9019;&#x6642;&#x5019;&#x518D;&#x5230;&#x9019;&#x500B;&#x6876;&#x5B50;&#x88E1;&#x641C;&#x5C0B;&#x7DB2;&#x9801;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</li>
+</ul>
+<div class="divider"></div>
+
+<h1 id="Javascript-Hash-Table&#xFF1A;"><a href="#Javascript-Hash-Table&#xFF1A;" class="headerlink" title="Javascript Hash Table&#xFF1A;"></a>Javascript Hash Table&#xFF1A;</h1><h2 id="&#x5EFA;&#x7ACB;-class"><a href="#&#x5EFA;&#x7ACB;-class" class="headerlink" title="&#x5EFA;&#x7ACB; class"></a>&#x5EFA;&#x7ACB; class</h2><p></p><figure class="highlight js hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashTable</span> </span>{</span><br><span class="line">  <span class="hljs-keyword">constructor</span>(size){</span><br><span class="line">    <span class="hljs-keyword">this</span>.data = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(size);</span><br><span class="line">  }</span><br><span class="line">  <span class="hljs-comment">//&#x7C21;&#x6613;&#x7684;&#x96DC;&#x6E4A;</span></span><br><span class="line">  _hash(key) {</span><br><span class="line">    <span class="hljs-keyword">let</span> hash = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i =<span class="hljs-number">0</span>; i &lt; key.length; i++){</span><br><span class="line">        hash = (hash + key.charCodeAt(i) * i) % <span class="hljs-keyword">this</span>.data.length</span><br><span class="line">    }</span><br><span class="line">    <span class="hljs-keyword">return</span> hash;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p></p><figure class="highlight js hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashTable</span> </span>{</span><br><span class="line">  <span class="hljs-comment">//...&#x4EE5;&#x4E0A;&#x7701;&#x7565;</span></span><br><span class="line">  <span class="hljs-keyword">set</span>(key, value) {</span><br><span class="line">    <span class="hljs-keyword">let</span> address = <span class="hljs-keyword">this</span>._hash(key);</span><br><span class="line">    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.data[address]) {</span><br><span class="line">      <span class="hljs-keyword">this</span>.data[address] = [];</span><br><span class="line">    }</span><br><span class="line">    <span class="hljs-keyword">this</span>.data[address].push([key, value]);</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.data;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><p></p><figure class="highlight js hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HashTable</span> </span>{</span><br><span class="line">  <span class="hljs-comment">//...&#x4EE5;&#x4E0A;&#x7701;&#x7565;</span></span><br><span class="line">  <span class="hljs-keyword">get</span>(key){</span><br><span class="line">    <span class="hljs-keyword">const</span> address = <span class="hljs-keyword">this</span>._hash(key);</span><br><span class="line">    <span class="hljs-keyword">const</span> currentBucket = <span class="hljs-keyword">this</span>.data[address]</span><br><span class="line">    <span class="hljs-keyword">if</span> (currentBucket) {</span><br><span class="line">      <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; currentBucket.length; i++){</span><br><span class="line">        <span class="hljs-keyword">if</span>(currentBucket[i][<span class="hljs-number">0</span>] === key) {</span><br><span class="line">          <span class="hljs-keyword">return</span> currentBucket[i][<span class="hljs-number">1</span>]</span><br><span class="line">        }</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">undefined</span>;</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+</body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/JavaScript/">#JavaScript</a></span>
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/DataStructure/">#DataStructure</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2020/06/06/DataStructure/data-structure-javascript-linked-list/">Data Structure - Linked List</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="addthis_inline_share_toolbox"></div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e9cfd9a3dbb4e6d"></script>
+
+</div>
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://jyun9504.github.io/2020/06/07/DataStructure/data-structure-javascript-hash-table/';
+        this.page.identifier = '2020/06/07/DataStructure/data-structure-javascript-hash-table/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'house-of-jyun' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2020 Jyun&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/jyun9504" target="_blank" rel="noopener">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>
